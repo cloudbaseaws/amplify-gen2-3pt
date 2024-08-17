@@ -1,0 +1,20 @@
+type EstimateInput {
+    optimistic: Float!
+    mostLikely: Float!
+    pessimistic: Float!
+}
+
+type Estimate {
+    id: ID!
+    optimistic: Float!
+    mostLikely: Float!
+    pessimistic: Float!
+}
+
+type Mutation {
+    createEstimate(input: EstimateInput!): Estimate!
+}
+
+type Query {
+    getEstimates: [Estimate!]!
+}
